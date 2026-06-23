@@ -1,2 +1,52 @@
-git_stage.sh
-check_repo.sh
+# ====================================================================
+# SECURITY BOUNDARIES & SERVER PROTECTION
+# ====================================================================
+# Lock down local bash automation tools, keys, and sync utilities
+*.sh
+git-sync
+check-repo-secrets
+credentials*
+*.env
+*.pem
+*.key
+*.token
+
+# ====================================================================
+# SYSTEM & ENVIRONMENT ARTIFACTS
+# ====================================================================
+# Linux/Ubuntu system files
+.DS_Store
+Thumbs.db
+.directory
+*~
+*.swp
+*.swo
+
+# Local text editor & IDE workspaces
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ====================================================================
+# STATIC SITE GENERATORS & BUILD OUTPUTS (Jekyll / GitHub Pages)
+# ====================================================================
+# Block local compilation targets and dependency caches
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+node_modules/
+vendor/
+
+# ====================================================================
+# PYTHON / AI WORKSPACE ARTIFACTS
+# ====================================================================
+# If you run any local python scripts or testing layers
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+env/
