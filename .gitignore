@@ -1,20 +1,39 @@
 # ====================================================================
-# SECURITY BOUNDARIES & SERVER PROTECTION
+# MANDATORY SECURITY BOUNDARIES
 # ====================================================================
-# Lock down local bash automation tools, keys, and sync utilities
-*.sh
-git-sync
-check-repo-secrets
-credentials*
+# Complete lock down of environments, credentials, keys, and tokens
+.env
+.env.*
 *.env
+credentials*
+*-credentials
+*secrets*
 *.pem
 *.key
 *.token
+*.cert
+*.crt
+*.p12
+
+# Block local bash automation tools by default
+*.sh
+git-sync
+check-repo-secrets
+
+# EXPLICIT EXCEPTIONS: Allow only these verified operational scripts
+!sync-github.sh
+!check-repo-secrets.sh
 
 # ====================================================================
-# SYSTEM & ENVIRONMENT ARTIFACTS
+# DEVELOPMENT & SYSTEM ARTIFACTS
 # ====================================================================
-# Linux/Ubuntu system files
+# Node / Build Tooling caches (if used for modern frontend components)
+node_modules/
+.npm/
+dist/
+build/
+
+# Linux/Ubuntu & OS system artifacts
 .DS_Store
 Thumbs.db
 .directory
@@ -29,20 +48,8 @@ Thumbs.db
 *.sublime-workspace
 
 # ====================================================================
-# STATIC SITE GENERATORS & BUILD OUTPUTS (Jekyll / GitHub Pages)
+# PYTHON / VIRTUAL ENVIRONMENTS
 # ====================================================================
-# Block local compilation targets and dependency caches
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-node_modules/
-vendor/
-
-# ====================================================================
-# PYTHON / AI WORKSPACE ARTIFACTS
-# ====================================================================
-# If you run any local python scripts or testing layers
 __pycache__/
 *.py[cod]
 *$py.class
