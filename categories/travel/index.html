@@ -3,36 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel & Logistics — Walter Yu</title>
-    <link rel="stylesheet" href="../../style.css">
+    <title>Travel Archives &amp; Experiential Design — Walter Yu</title>
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --accent-color: #ffb366;
+            --code-bg: #2d2d2d;
+            --card-bg: #242424;
+            --meta: #888888;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+            margin-top: 2rem;
+            letter-spacing: -0.01em;
+        }
+        h1 {
+            font-size: 2.3rem;
+            border-bottom: 2px solid var(--code-bg);
+            padding-bottom: 0.5rem;
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .article-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--code-bg);
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .card-meta {
+            color: var(--meta);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+        .card-title {
+            font-size: 1.4rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+        }
+        .card-title a {
+            color: #ffffff;
+        }
+        .card-title a:hover {
+            color: var(--accent-color);
+        }
+        .card-excerpt {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            margin: 0;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--code-bg);
+            margin: 2rem 0;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="../../index.html" class="logo">walteryu.com</a>
-            <nav>
-                <a href="../../index.html">Home</a>
-                <a href="../../about/index.html">About</a>
-            </nav>
-        </header>
 
-        <section class="hero">
-            <h1>✈️ Travel & Logistics</h1>
-            <p>Deliberate blueprints, spatial maps, and non-commercial route data tracking independent multi-destination travel through Europe, Southeast Asia, and global wilderness reserves.</p>
-        </section>
+    <h1>Travel Archives &amp; Experiential Design</h1>
+    <p>A collection of post-trip logs, tactical manifests, and retrospectives exploring regional geography, cultural hubs, and long-term residency verification modules outside the US.</p>
 
-        <div class="section-title">Logistics Log Archive</div>
-        <ul class="entry-list">
-            <li class="entry-item">
-                <div class="entry-meta">Coming Soon • Route Blueprint</div>
-                <div class="entry-title" style="color: var(--meta);">Independent Route Management: Navigating Overland Borders in Southeast Asia</div>
-            </li>
-        </ul>
+    <hr>
 
-        <footer>
-            <span><a href="../../index.html">← Return to Dashboard</a></span>
-            <span>Refreshed: June 2026</span>
-        </footer>
+    <div class="article-cards-container">
+
+        <!-- Active Core Travel Log Card -->
+        <div class="article-card">
+            <div class="card-meta">Published: June 2026 • Travel Focus: February 2026 • 7 min read</div>
+            <h2 class="card-title">
+                <a href="../../articles/southeast-asia-flow-2026.html">The Architecture of Flow: Two Weeks Navigating Thailand &amp; Laos</a>
+            </h2>
+            <p class="card-excerpt">
+                An operational retrospective detailing a high-efficiency regional route. Utilizing the modern Laos-China Railway (LCR) network to link high-heat vertical karst scrambles in Vang Vieng with deep psychological stillness in Luang Prabang.
+            </p>
+        </div>
+
+        <!-- Hidden or past stubs can be stacked here -->
+
     </div>
+
+    <hr>
+    <footer>
+        <span><a href="../../index.html">← Back to Root Console</a></span>
+    </footer>
+
 </body>
 </html>
