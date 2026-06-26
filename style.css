@@ -1,0 +1,209 @@
+:root {
+    --bg: #fcfaf6;          /* Warm ivory background */
+    --text: #1c1c1e;        /* Deep soft charcoal */
+    --accent: #d47a55;      /* Warm clay accent for links and subtle states */
+    --border: #e6e3dd;      /* Muted sandstone divider lines */
+    --card-bg: #f5f2eb;     /* Soft card background */
+    --meta: #6e6e73;        /* Readable graphite for dates and tags */
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0d0d0d;      /* Deep midnight canvas */
+        --text: #e5e5e7;    /* Cream white typography */
+        --accent: #e08b67;  /* Slightly brighter clay accent */
+        --border: #222224;  /* Muted charcoal divider lines */
+        --card-bg: #161617; /* Dark card matrix */
+        --meta: #86868b;    /* Clean grey reading meta text */
+    }
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+header a.logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    text-decoration: none;
+}
+
+nav a {
+    margin-left: 1.5rem;
+    color: var(--meta);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--text);
+}
+
+.hero {
+    margin-bottom: 4.5rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--meta);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.section-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--meta);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.75rem;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+    border-color: var(--accent);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card h3 a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--meta);
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.entry-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 4rem;
+}
+
+.entry-item {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.entry-meta {
+    font-size: 0.85rem;
+    color: var(--meta);
+    margin-bottom: 0.25rem;
+}
+
+.entry-title a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.entry-title a:hover {
+    color: var(--accent);
+}
+
+blockquote {
+    border-left: 3px solid var(--accent);
+    margin: 2rem 0;
+    padding-left: 1.25rem;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+pre, code {
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    background: var(--card-bg);
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+code {
+    padding: 0.2rem 0.4rem;
+}
+
+pre {
+    padding: 1.25rem;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    line-height: 1.5;
+}
+
+pre code {
+    padding: 0;
+    background: transparent;
+}
+
+footer {
+    margin-top: 6rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--meta);
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a {
+    color: var(--text);
+    text-decoration: none;
+}
