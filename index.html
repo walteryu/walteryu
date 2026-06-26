@@ -3,36 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — Walter Yu</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Walter Yu — Notebook</title>
+    <!-- Root style link -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <a href="../index.html" class="logo">walteryu.com</a>
+            <a href="index.html" class="logo">walteryu.com</a>
             <nav>
-                <a href="../index.html">Home</a>
-                <a href="index.html" class="active">About</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="about/index.html">About</a>
             </nav>
         </header>
 
-        <article>
-            <h1 style="font-size: 2.3rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 2rem;">About & Philosophy</h1>
-            
-            <p>This site exists as a digital commonplace book—a personal, non-commercial notebook capturing notes at the intersection of logic systems, physical movement, and longevity planning.</p>
+        <section class="hero">
+            <h1>Walter Yu</h1>
+            <p>A minimalist digital commonplace book tracking engineering logic, local AI orchestration pipelines, mountain logistics, and strategic health span planning.</p>
+        </section>
 
-            <p>Rather than managing time to achieve maximum productivity, the goals here lean toward structural life design: focusing on relationships, exploring wild mountain spaces, and building self-contained, offline AI experiments on personal hardware configurations.</p>
-            
-            <h3>Principles in Focus</h3>
-            <ul>
-                <li><strong>Open Architecture:</strong> No tracking parameters, tracking pixels, or dynamic framework dependencies. Plain text designed to read easily on any device.</li>
-                <li><strong>Active Vitality:</strong> Using mountain trails, high-altitude trekking, and physical endurance challenges as foundational structural points for extended health span.</li>
-            </ul>
-        </article>
+        <!-- The 4 Pillars Grid Navigation Matrix -->
+        <div class="section-title">Core Focus Pillars</div>
+        <div class="pillars-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2.5rem;">
+            <a href="categories/tech/index.html" class="pillar-card" style="display: block; padding: 1.5rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; text-decoration: none; color: inherit; transition: transform 0.2s;">
+                <h3 style="margin-top:0; color: #fff;">💻 Code &amp; Flow</h3>
+                <p style="font-size: 0.9rem; margin-bottom:0; opacity:0.8;">Local AI architectures, server builds, and automation.</p>
+            </a>
+            <a href="categories/outdoors/index.html" class="pillar-card" style="display: block; padding: 1.5rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; text-decoration: none; color: inherit; transition: transform 0.2s;">
+                <h3 style="margin-top:0; color: #fff;"> climbers 🧗 Mountains</h3>
+                <p style="font-size: 0.9rem; margin-bottom:0; opacity:0.8;">Technical sport climbing, high trails, and gear log splits.</p>
+            </a>
+            <a href="categories/travel/index.html" class="pillar-card" style="display: block; padding: 1.5rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; text-decoration: none; color: inherit; transition: transform 0.2s;">
+                <h3 style="margin-top:0; color: #fff;">✈️ Travel Logistics</h3>
+                <p style="font-size: 0.9rem; margin-bottom:0; opacity:0.8;">Multi-destination routing models and independent wilderness itineraries.</p>
+            </a>
+            <a href="categories/vitality/index.html" class="pillar-card" style="display: block; padding: 1.5rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; text-decoration: none; color: inherit; transition: transform 0.2s;">
+                <h3 style="margin-top:0; color: #fff;">🌱 Vitality</h3>
+                <p style="font-size: 0.9rem; margin-bottom:0; opacity:0.8;">Time boundaries, deliberate recovery, and health span frameworks.</p>
+            </a>
+        </div>
+
+        <div class="section-title">Recent Notebook Entries</div>
+        <ul class="entry-list">
+            <li class="entry-item">
+                <div class="entry-meta">June 2026 • Hardware &amp; AI Systems</div>
+                <div class="entry-title">
+                    <a href="articles/building-atlas-local-ai-server.html">Building Atlas: A Journey from Consumer Hardware to a Local AI Powerhouse</a>
+                </div>
+            </li>
+        </ul>
 
         <footer>
-            <span>Updated: June 2026</span>
-            <span><a href="../index.html">← Back Home</a></span>
+            <span>Refreshed: June 2026</span>
+            <span>Independent Platform</span>
         </footer>
     </div>
 </body>
